@@ -1,88 +1,22 @@
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Judit Relax Studio - Hamarosan!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: white;
-            color: #333;
-            position: relative;
-        }
-        header {
-            text-align: center;
-            position: absolute;
-            top: 20px;
-        }
-        header img {
-            max-width: 300px;
-        }
-        main {
-            text-align: center;
-        }
-        main h1 {
-            font-size: 2.5em;
-            color: #E91E63;
-            margin-bottom: 10px;
-        }
-        main h2 {
-            font-size: 1.5em;
-            color: #666;
-            margin-bottom: 30px;
-        }
-        .buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-        }
-        .buttons a {
-            text-decoration: none;
-            color: white;
-            background-color: #E91E63;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 1em;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .buttons a:hover {
-            background-color: #d01750;
-        }
-        footer {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-        }
-        footer img {
-            max-width: 700px;
-            opacity: 0.8;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <img src="logo.png" alt="Judit Relax Studio Logo">
-    </header>
-    <main>
-        <h1>Az oldal hamarosan elérhető lesz!</h1>
-        <h2>The page is coming soon!</h2>
-        <div class="buttons">
-            <a href="https://app.minup.io/book/juditrelax-nagyrede" target="_blank">Foglalás Nagyrédén</a>
-            <a href="https://app.minup.io/book/juditrelax-rozsaszentmarton" target="_blank">Foglalás Rózsaszentmártonon</a>
-            <a href="http://facebook.com/juditrelaxstudio" target="_blank">Facebook</a>
+import React from "react";
+
+const App = () => {
+    return (
+        <div className="flex flex-col items-center justify-center h-screen text-center bg-white text-gray-900">
+            <header className="mb-6">
+                <img src="logo.png" alt="Judit Relax Studio Logo" className="max-w-xs" />
+            </header>
+            <main>
+                <h1 className="text-4xl font-bold text-pink-600 mb-2">Az oldal hamarosan elérhető lesz!</h1>
+                <h2 className="text-xl text-gray-600 mb-6">The page is coming soon!</h2>
+                <div className="flex flex-wrap justify-center gap-4">
+                    <a href="szolgaltatasok.html" className="px-6 py-3 bg-pink-600 text-white rounded-full text-lg font-semibold transition hover:bg-pink-700">Szolgáltatások</a>
+                    <a href="support.html" className="px-6 py-3 bg-pink-600 text-white rounded-full text-lg font-semibold transition hover:bg-pink-700">Támogatás</a>
+                    <a href="privacy.html" className="px-6 py-3 bg-pink-600 text-white rounded-full text-lg font-semibold transition hover:bg-pink-700">Adatvédelmi Tájékoztató</a>
+                </div>
+            </main>
         </div>
-    </main>
-    <footer>
-        <img src="image1.png" alt="Decorative Image">
-    </footer>
-</body>
-</html>
+    );
+};
+
+export default App;
