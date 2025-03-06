@@ -1,76 +1,75 @@
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adatvédelmi Tájékoztató</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: #E91E63;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        header h1 {
-            margin: 0;
-        }
-        main {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        section h2 {
-            color: #E91E63;
-            border-bottom: 2px solid #E91E63;
-            padding-bottom: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            position: relative;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Adatvédelmi Tájékoztató</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Bevezetés</h2>
-            <p>Az Ön adatainak védelme kiemelten fontos számunkra. Ez a tájékoztató bemutatja, hogyan kezeljük személyes adatait.</p>
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+
+const Home = () => (
+    <div className="flex flex-col items-center min-h-screen bg-gray-50 text-gray-900">
+        <header className="w-full bg-pink-600 text-white py-6 text-center shadow-lg">
+            <img src="logo.png" alt="Judit Relax Studio Logo" className="max-w-xs mx-auto" />
+        </header>
+        <main className="flex flex-col items-center w-full max-w-4xl px-6 py-12 text-center">
+            <h1 className="text-5xl font-extrabold text-pink-600">Üdvözöljük a Judit Relax Stúdióban</h1>
+            <p className="text-lg text-gray-700 mt-4 max-w-2xl">Masszázs és relaxáció egy nyugodt, kellemes környezetben. Tapasztalja meg a teljes kikapcsolódást és harmóniát.</p>
+            
+            <div className="flex flex-wrap justify-center gap-6 mt-8">
+                <Link to="/services" className="px-8 py-4 bg-pink-600 text-white rounded-full text-lg font-semibold shadow-md transition hover:bg-pink-700">Szolgáltatások</Link>
+                <Link to="/support" className="px-8 py-4 bg-pink-600 text-white rounded-full text-lg font-semibold shadow-md transition hover:bg-pink-700">Támogatás</Link>
+                <Link to="/privacy" className="px-8 py-4 bg-pink-600 text-white rounded-full text-lg font-semibold shadow-md transition hover:bg-pink-700">Adatvédelem</Link>
+            </div>
+            
+            <section className="mt-12 w-full text-center">
+                <h2 className="text-4xl font-bold text-pink-600">Foglalás</h2>
+                <p className="text-gray-700 mt-3 max-w-2xl">Foglaljon időpontot online gyorsan és egyszerűen, és élvezze a professzionális masszázs szolgáltatásainkat.</p>
+                <div className="flex flex-wrap justify-center gap-4 mt-6">
+                    <a href="https://app.minup.io/book/juditrelax-nagyrede" className="px-8 py-4 bg-green-600 text-white rounded-full text-lg font-semibold shadow-md transition hover:bg-green-700">Foglalás Nagyrédén</a>
+                    <a href="https://app.minup.io/book/juditrelax-rozsaszentmarton" className="px-8 py-4 bg-green-600 text-white rounded-full text-lg font-semibold shadow-md transition hover:bg-green-700">Foglalás Rózsaszentmártonon</a>
+                </div>
+            </section>
+        </main>
+    </div>
+);
+
+const Services = () => (
+    <div className="p-10 text-center">
+        <h1 className="text-3xl font-bold text-pink-600">Szolgáltatások</h1>
+        <p>Részletek a szolgáltatásokról...</p>
+    </div>
+);
+
+const Support = () => (
+    <div className="p-10 text-center">
+        <h1 className="text-3xl font-bold text-pink-600">Támogatás</h1>
+        <p>Kapcsolat és ügyfélszolgálati információk...</p>
+    </div>
+);
+
+const Privacy = () => (
+    <div className="p-10 text-center">
+        <h1 className="text-3xl font-bold text-pink-600">Adatvédelmi Tájékoztató</h1>
+        <p>Adatkezelési információk...</p>
+        <section className="mt-10">
+            <h2 className="text-2xl font-bold text-pink-600">Kapcsolatfelvétel</h2>
+            <form className="mt-4 max-w-lg mx-auto bg-white p-6 rounded shadow-md">
+                <label className="block text-left text-gray-700 font-semibold">Név:</label>
+                <input type="text" className="w-full p-2 border rounded mt-2" placeholder="Írd be a neved" required />
+                <label className="block text-left text-gray-700 font-semibold mt-4">Email:</label>
+                <input type="email" className="w-full p-2 border rounded mt-2" placeholder="Írd be az email címed" required />
+                <label className="block text-left text-gray-700 font-semibold mt-4">Üzenet:</label>
+                <textarea className="w-full p-2 border rounded mt-2" rows="4" placeholder="Írd be az üzeneted" required></textarea>
+                <button type="submit" className="mt-4 w-full bg-pink-600 text-white p-3 rounded font-bold hover:bg-pink-700">Küldés</button>
+            </form>
         </section>
-        <section>
-            <h2>Milyen adatokat gyűjtünk?</h2>
-            <p>Az alábbi adatokat gyűjthetjük Önről: név, e-mail cím, telefonszám, IP-cím, valamint a weboldalunk használatával kapcsolatos információk.</p>
-        </section>
-        <section>
-            <h2>Az adatok felhasználása</h2>
-            <p>Az összegyűjtött adatokat kizárólag a szolgáltatásaink javítására és az Önnel való kommunikációra használjuk.</p>
-        </section>
-        <section>
-            <h2>Adatvédelem és biztonság</h2>
-            <p>Megfelelő technikai és szervezési intézkedéseket alkalmazunk annak érdekében, hogy megvédjük az Ön adatait.</p>
-        </section>
-        <section>
-            <h2>Kapcsolat</h2>
-            <p>Ha bármilyen kérdése van az adatkezeléssel kapcsolatban, lépjen kapcsolatba velünk.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Minden jog fenntartva.</p>
-    </footer>
-</body>
-</html>
+    </div>
+);
+
+const App = () => (
+    <Router>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/privacy" element={<Privacy />} />
+        </Routes>
+    </Router>
+);
+
+export default App;
