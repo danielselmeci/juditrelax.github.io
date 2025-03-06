@@ -1,22 +1,53 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
-const App = () => {
-    return (
-        <div className="flex flex-col items-center justify-center h-screen text-center bg-white text-gray-900">
-            <header className="mb-6">
-                <img src="logo.png" alt="Judit Relax Studio Logo" className="max-w-xs" />
-            </header>
-            <main>
-                <h1 className="text-4xl font-bold text-pink-600 mb-2">Az oldal hamarosan elérhető lesz!</h1>
-                <h2 className="text-xl text-gray-600 mb-6">The page is coming soon!</h2>
-                <div className="flex flex-wrap justify-center gap-4">
-                    <a href="szolgaltatasok.html" className="px-6 py-3 bg-pink-600 text-white rounded-full text-lg font-semibold transition hover:bg-pink-700">Szolgáltatások</a>
-                    <a href="support.html" className="px-6 py-3 bg-pink-600 text-white rounded-full text-lg font-semibold transition hover:bg-pink-700">Támogatás</a>
-                    <a href="privacy.html" className="px-6 py-3 bg-pink-600 text-white rounded-full text-lg font-semibold transition hover:bg-pink-700">Adatvédelmi Tájékoztató</a>
-                </div>
-            </main>
-        </div>
-    );
-};
+const Home = () => (
+    <div className="flex flex-col items-center justify-center h-screen text-center bg-white text-gray-900">
+        <header className="mb-6">
+            <img src="logo.png" alt="Judit Relax Studio Logo" className="max-w-xs" />
+        </header>
+        <main>
+            <h1 className="text-4xl font-bold text-pink-600 mb-2">Az oldal hamarosan elérhető lesz!</h1>
+            <h2 className="text-xl text-gray-600 mb-6">The page is coming soon!</h2>
+            <div className="flex flex-wrap justify-center gap-4">
+                <Link to="/services" className="px-6 py-3 bg-pink-600 text-white rounded-full text-lg font-semibold transition hover:bg-pink-700">Szolgáltatások</Link>
+                <Link to="/support" className="px-6 py-3 bg-pink-600 text-white rounded-full text-lg font-semibold transition hover:bg-pink-700">Támogatás</Link>
+                <Link to="/privacy" className="px-6 py-3 bg-pink-600 text-white rounded-full text-lg font-semibold transition hover:bg-pink-700">Adatvédelmi Tájékoztató</Link>
+            </div>
+        </main>
+    </div>
+);
+
+const Services = () => (
+    <div className="p-10 text-center">
+        <h1 className="text-3xl font-bold text-pink-600">Szolgáltatások</h1>
+        <p>Részletek a szolgáltatásokról...</p>
+    </div>
+);
+
+const Support = () => (
+    <div className="p-10 text-center">
+        <h1 className="text-3xl font-bold text-pink-600">Támogatás</h1>
+        <p>Kapcsolat és ügyfélszolgálati információk...</p>
+    </div>
+);
+
+const Privacy = () => (
+    <div className="p-10 text-center">
+        <h1 className="text-3xl font-bold text-pink-600">Adatvédelmi Tájékoztató</h1>
+        <p>Adatkezelési információk...</p>
+    </div>
+);
+
+const App = () => (
+    <Router>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/privacy" element={<Privacy />} />
+        </Routes>
+    </Router>
+);
 
 export default App;
