@@ -2,26 +2,26 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 const Home = () => (
-    <div className="flex flex-col items-center justify-center min-h-screen text-center bg-gray-100 text-gray-900 p-6">
-        <header className="w-full bg-pink-600 text-white py-4 text-center shadow-md">
+    <div className="flex flex-col items-center min-h-screen bg-gray-50 text-gray-900">
+        <header className="w-full bg-pink-600 text-white py-6 text-center shadow-lg">
             <img src="logo.png" alt="Judit Relax Studio Logo" className="max-w-xs mx-auto" />
         </header>
-        <main className="flex flex-col items-center w-full max-w-4xl">
-            <h1 className="text-5xl font-bold text-pink-600 mt-8">Üdvözöljük a Judit Relax Stúdióban</h1>
-            <p className="text-lg text-gray-700 mt-4">Masszázs és relaxáció egy nyugodt, kellemes környezetben.</p>
+        <main className="flex flex-col items-center w-full max-w-4xl px-6 py-12 text-center">
+            <h1 className="text-5xl font-extrabold text-pink-600">Üdvözöljük a Judit Relax Stúdióban</h1>
+            <p className="text-lg text-gray-700 mt-4 max-w-2xl">Masszázs és relaxáció egy nyugodt, kellemes környezetben. Tapasztalja meg a teljes kikapcsolódást és harmóniát.</p>
             
-            <div className="flex flex-wrap justify-center gap-6 mt-6">
-                <Link to="/services" className="px-6 py-3 bg-pink-600 text-white rounded-full text-lg font-semibold transition hover:bg-pink-700">Szolgáltatások</Link>
-                <Link to="/support" className="px-6 py-3 bg-pink-600 text-white rounded-full text-lg font-semibold transition hover:bg-pink-700">Támogatás</Link>
-                <Link to="/privacy" className="px-6 py-3 bg-pink-600 text-white rounded-full text-lg font-semibold transition hover:bg-pink-700">Adatvédelmi Tájékoztató</Link>
+            <div className="flex flex-wrap justify-center gap-6 mt-8">
+                <Link to="/services" className="px-8 py-4 bg-pink-600 text-white rounded-full text-lg font-semibold shadow-md transition hover:bg-pink-700">Szolgáltatások</Link>
+                <Link to="/support" className="px-8 py-4 bg-pink-600 text-white rounded-full text-lg font-semibold shadow-md transition hover:bg-pink-700">Támogatás</Link>
+                <Link to="/privacy" className="px-8 py-4 bg-pink-600 text-white rounded-full text-lg font-semibold shadow-md transition hover:bg-pink-700">Adatvédelem</Link>
             </div>
             
-            <section className="mt-10 w-full text-center">
-                <h2 className="text-3xl font-bold text-pink-600">Foglalás</h2>
-                <p className="text-gray-700 mt-2">Foglaljon időpontot online gyorsan és egyszerűen.</p>
-                <div className="flex flex-wrap justify-center gap-4 mt-4">
-                    <a href="https://app.minup.io/book/juditrelax-nagyrede" className="px-6 py-3 bg-green-600 text-white rounded-full text-lg font-semibold transition hover:bg-green-700">Foglalás Nagyrédén</a>
-                    <a href="https://app.minup.io/book/juditrelax-rozsaszentmarton" className="px-6 py-3 bg-green-600 text-white rounded-full text-lg font-semibold transition hover:bg-green-700">Foglalás Rózsaszentmártonon</a>
+            <section className="mt-12 w-full text-center">
+                <h2 className="text-4xl font-bold text-pink-600">Foglalás</h2>
+                <p className="text-gray-700 mt-3 max-w-2xl">Foglaljon időpontot online gyorsan és egyszerűen, és élvezze a professzionális masszázs szolgáltatásainkat.</p>
+                <div className="flex flex-wrap justify-center gap-4 mt-6">
+                    <a href="https://app.minup.io/book/juditrelax-nagyrede" className="px-8 py-4 bg-green-600 text-white rounded-full text-lg font-semibold shadow-md transition hover:bg-green-700">Foglalás Nagyrédén</a>
+                    <a href="https://app.minup.io/book/juditrelax-rozsaszentmarton" className="px-8 py-4 bg-green-600 text-white rounded-full text-lg font-semibold shadow-md transition hover:bg-green-700">Foglalás Rózsaszentmártonon</a>
                 </div>
             </section>
         </main>
