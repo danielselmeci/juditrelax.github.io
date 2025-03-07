@@ -5,6 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Judit Relax Stúdió</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-color: #E91E63;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header img {
+            max-width: 250px;
+        }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #E91E63;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        .booking-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .booking-links a {
+            text-decoration: none;
+            background-color: #E91E63;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .booking-links a:hover {
+            background-color: #c2185b;
+        }
+        .contact-form {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #E91E63;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #c2185b;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,8 +107,10 @@
         <section>
             <h2>Foglalás</h2>
             <p>Foglaljon időpontot online gyorsan és egyszerűen.</p>
-            <a href="https://app.minup.io/book/juditrelax-nagyrede">Foglalás Nagyrédén</a>
-            <a href="https://app.minup.io/book/juditrelax-rozsaszentmarton">Foglalás Rózsaszentmártonon</a>
+            <div class="booking-links">
+                <a href="https://app.minup.io/book/juditrelax-nagyrede">Foglalás Nagyrédén</a>
+                <a href="https://app.minup.io/book/juditrelax-rozsaszentmarton">Foglalás Rózsaszentmártonon</a>
+            </div>
         </section>
 
         <section>
